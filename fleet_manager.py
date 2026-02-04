@@ -51,3 +51,13 @@ def add_member(names, ranks, divs, ids):
     print("DIVISION:", new_div)
     print("ID:", new_id)
 
+def remove_member(names, ranks, divs, ids):
+    rem = int(input("ID TO REMOVE: "))
+    if rem in ids:
+        idx = ids.index(rem)
+        names.pop(idx)
+        ranks.pop(idx)
+        divs.pop(idx)
+        ids.pop(idx)
+    else: 
+        print("ID NOT FOUND")
