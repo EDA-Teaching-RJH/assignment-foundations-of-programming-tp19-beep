@@ -19,9 +19,35 @@ def display_menu():
     print("6. Filter By Divisions")
     print("7. Calculate Payroll")
     print("8. Count Officers")
+    print("9. Exit")
 
     option = input("Select an Option:")
 
     return option
+
+def add_member(names, ranks, divs, ids):
+    new_name = input("NAME:")
+    new_rank = input("RANK:")
+    new_div = input("DIVISION:")
+    new_id = int(input("ID:"))
+
+    valid_ranks = ["Lieutenant Commander", "Lieutenant", "Commander", "Captain", "Ensign"]
+
+    if new_rank not in valid_ranks:
+        print("INVALID RANK")
+        return 
+    if new_id in ids:
+        print("ID IS INVALID")
+        return 
     
+    names.append(new_name)
+    ranks.append(new_rank)
+    divs.append(new_div)
+    ids.append(new_id) 
+
+    print("NEW MEMBER ADDED SUCCESSFULLY")
+    print("NAME:", new_name)
+    print("RANK:", new_rank)
+    print("DIVISION:", new_div)
+    print("ID:", new_id)
 
