@@ -61,3 +61,21 @@ def remove_member(names, ranks, divs, ids):
         ids.pop(idx)
     else: 
         print("ID NOT FOUND")
+
+def update_rank(names, ranks, ids):
+    update_id = int(input("ID TO UPDATE: "))
+    if update_id not in ids: 
+        print("ID NOT FOUND")
+        return
+    
+    idx = ids.index(update_id)
+    new_rank = input("INPUT NEW RANK: ")
+    
+    valid_ranks = ["Lieutenant Commander", "Lieutenant", "Commander", "Captain", "Ensign"]
+     
+    if new_rank not in valid_ranks:
+        print("INVALID RANK")
+        return
+    ranks[idx] = new_rank
+    print("RANK UPDATED SUCCESSFULLY")
+    
