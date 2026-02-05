@@ -78,4 +78,11 @@ def update_rank(names, ranks, ids):
         return
     ranks[idx] = new_rank
     print("RANK UPDATED SUCCESSFULLY")
+
+def display_roster(names, ranks, divs, ids):
+    print("ROSTER:")
+    print("NAME - RANK - DIVISION - ID")
+
+    for i in range(len(names)):
+        print(names[i] + " - " + ranks[i] + " - " + divs[i] + " - " + str(ids[i]))
     
