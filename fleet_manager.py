@@ -128,4 +128,35 @@ def count_officers(ranks):
             count += 1
     return count
 
-    
+def main():
+    names, ranks, divs, ids = init_database()
+
+    while True:
+        option = display_menu()
+
+        if option == "1":
+            add_member(names, ranks, divs, ids)
+        elif option == "2":
+            remove_member(names, ranks, divs, ids)
+        elif option == "3":
+            update_rank(names, ranks, ids)
+        elif option == "4":
+            display_roster(names, ranks, divs, ids)
+        elif option == "5":
+            search_crew(names, ranks, divs, ids)
+        elif option == "6":
+            filter_by_division(names, divs)
+        elif option == "7":
+            total_pay = calculate_payroll(ranks)
+            print("TOTAL PAYROLL =", total_pay)
+        elif option == "8": 
+            officers = count_officers(ranks)
+            print("TOTAL OFFICERS", officers)
+        elif option == "9":
+            print("GOODBYE.")
+            break 
+        else: 
+            print("INVALID OPTION.")
+
+   
+main()     
