@@ -93,4 +93,14 @@ def search_crew(names, ranks, divs, ids):
         if search in names[i]:
              print(names[i] + " - " + ranks[i] + " - " + divs[i] + " - " + str(ids[i]))
 
+def filter_by_division(names, divs):
+    division_type = input("CHOOSE DIVISION(Command / Operations / Sciences): ")
+
+    if division_type not in ["Command", "Operations", "Sciences"]:
+        print("INVALID DIVISION")
+        return
+    
+    for i in range(len(names)):
+        if divs[i] == division_type:
+            print(names[i])
     
