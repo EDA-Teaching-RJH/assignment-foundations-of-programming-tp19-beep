@@ -85,4 +85,12 @@ def display_roster(names, ranks, divs, ids):
 
     for i in range(len(names)):
         print(names[i] + " - " + ranks[i] + " - " + divs[i] + " - " + str(ids[i]))
+
+def search_crew(names, ranks, divs, ids):
+    search = input("SEARCH NAME: ")
+
+    for i in range(len(names)):
+        if search in names[i]:
+             print(names[i] + " - " + ranks[i] + " - " + divs[i] + " - " + str(ids[i]))
+
     
